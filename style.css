@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    font-size: 16px;
+    --var-black: hsl(212, 21%, 14%);
+    --var-grey: hsl(228, 12%, 48%);
+    --var-cream: hsl(30, 38%, 92%);
+    --var-green-500: hsl(158, 36%, 37%);
+    --var-green-700: hsl(158, 42%, 18%);
+}
+
+body {
+    background-color: var(--var-cream);
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+img {
+    border-radius: 0.75em 0.75em 0 0;
+    width: 100%;
+}
+
+.container {
+    margin: 5em 0.75em auto 0.75em; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.75em;
+    background-color: white;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.button:before {
+    content: url('images/icon-cart.svg');
+    padding-inline-end: 0.5em;
+    vertical-align: middle;
+}
+
+.button {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--var-green-500);
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.image-product-desktop {
+    display: none;
+}
+
+.image-product-mobile {
+    display: block;
+}
+
+.text-preset-1 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.text-preset-2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.text-preset-3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.text-preset-4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.3125em;
+}
+
+.text-preset-5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8125em;
+    line-height: 1.2;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.color-grey {
+    color: var(--var-grey);
+}
+
+.color-black {
+    color: var(--var-black);
+}
+
+.color-green-500 {
+    color: var(--var-green-500);
+}
+
+.color-white {
+    color: white;
+}
+
+@media screen and (min-width: 48em) {
+    .container {
+        margin: auto;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: row;
+        margin: auto; 
+        width: 37.5rem;
+        border-radius: 0.5em;
+    }
+
+    .image-product-desktop {
+        display: block;
+        border-radius: 0.75em 0 0 0.75em;
+    }
+
+    .image-product-mobile {
+        display: none;
+    }
+
+    .content {
+        width: 18.75em;
+    }
+
+    img {
+        width: 18.75em;
+    }
+}
